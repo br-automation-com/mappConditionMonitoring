@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="ConditionRawValues_page" layoutRefId="MyLayout">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="Header_content" areaRefId="AreaHeader" backColor="rgba(255, 133, 0, 1)"/>
+    <Assignment type="Content" baseContentRefId="ConditionRawValues_content" areaRefId="AreaContent" backColor="rgba(240, 240, 240, 1)"/>
+    <Assignment type="Content" baseContentRefId="Navigation_content" areaRefId="AreaNavigation" backColor="rgba(102, 53, 0, 1)"/>
+  </Assignments>
+</pdef:Page>

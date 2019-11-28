@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Library SubType="IEC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">mod_ConMon.fun</File>
+    <File Description="Main function block">fctConMon.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="FileIO" />
+    <Dependency ObjectName="MpRecipe" />
+    <Dependency ObjectName="MpAlarmX" />
+    <Dependency ObjectName="AsIOAcc" />
+    <Dependency ObjectName="MpBase" />
+  </Dependencies>
+</Library>

@@ -1,0 +1,21 @@
+(*Local constants*)
+VAR CONSTANT
+	MAX_STOP_FREQUENCY : UINT := 200; (*Maximum frequency that can be used for analysis*)
+	STEP_AUTO_WAIT : USINT := 0; (*Wait state*)
+	STEP_AUTO_READ : USINT := 10; (*Automatic state*)
+END_VAR
+(*Local variables*)
+VAR
+	CM_data_analyse : {REDUND_UNREPLICABLE} CM_ANALYSE_REC_typ; (*Recording structure*)
+	CM_data_vis : REFERENCE TO CM_data_type; (*Raw data structure for HMI*)
+	EnvValuesBuffer : ARRAY[1..MAX_STOP_FREQUENCY] OF REAL; (*Env data buffer*)
+	RmsValuesBuffer : ARRAY[1..MAX_STOP_FREQUENCY] OF REAL; (*Rms data buffer*)
+	EnvReferenceBuffer : ARRAY[1..MAX_STOP_FREQUENCY] OF REAL; (*Env reference data buffer*)
+	RmsReferenceBuffer : ARRAY[1..MAX_STOP_FREQUENCY] OF REAL; (*Rms reference data buffer*)
+	StepAutoAnalyze : USINT; (*State machine for automatic run*)
+	visStartStopAnalyse : BOOL; (*Start/Stop button for analysis*)
+	visChannelSelection : USINT := 1; (*Selected index for IO channel*)
+	visModuleSelection : USINT := 0; (*Selected index for module no*)
+	CM_Analyse : CM_ANALYSE_typ; (*Main structure for function call*)
+	CM_data : ARRAY[1..8] OF CM_data_type; (*Data structure for IO connection*)
+END_VAR

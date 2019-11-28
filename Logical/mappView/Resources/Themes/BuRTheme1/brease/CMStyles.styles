@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Styles id="CMStyles" xmlns="http://www.br-automation.com/iat2015/styles/engineering/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Style id="Output_OK" xsi:type="widgets.brease.NumericOutput" backColor="#2FC43B" fontSize="16px"/>
+	<Style id="Output_ERR" xsi:type="widgets.brease.NumericOutput" backColor="#A81717" fontSize="16px"/>	
+	<Style id="Button_OK" xsi:type="widgets.brease.NavigationButton" 
+		fontSize="16px" 
+		bold="true" 
+		textColor="#474747" 
+		mouseDownTextColor="#FFFFFF" 
+		cornerRadius="30px" 
+		mouseDownBorderWidth="0px 0px 0px 0px" 
+		mouseDownBackGroundGradient="linear-gradient(to bottom, #4A4A4A 0%,#7C7C7C 100%) " 
+		disabledBackGroundGradient="linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)" 
+		shadow="4px 4px 14px 0px rgba(62, 79, 92, 0.75)" 
+		mouseDownShadow="2px 2px 8px 0px rgba(62, 79, 92, 0.75)"
+	backGroundGradient="linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%)" />
+	<Style id="Button_ERR" xsi:type="widgets.brease.NavigationButton" 
+		fontSize="16px" 
+		bold="true" 
+		textColor="#474747" 
+		mouseDownTextColor="#FFFFFF" 
+		cornerRadius="30px" 
+		mouseDownBorderWidth="0px 0px 0px 0px" 
+		mouseDownBackGroundGradient="linear-gradient(to bottom, #4A4A4A 0%,rgba(191,57,34,1) 100%)" 
+		disabledBackGroundGradient="linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)" 
+		shadow="4px 4px 14px 0px rgba(62, 79, 92, 0.75)" 
+		mouseDownShadow="2px 2px 8px 0px rgba(62, 79, 92, 0.75)"
+	backGroundGradient="linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(191,57,34,1) 100%)"/>	
+</Styles>

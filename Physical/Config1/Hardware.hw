@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="X20BB52" Type="X20BB52" Version="1.1.0.0" />
+  <Module Name="X20BM31a" Type="X20BM31" Version="1.0.0.1">
+    <Connection Connector="X2X1" TargetModule="X20BB52" TargetConnector="IF6" />
+  </Module>
+  <Module Name="X20BM31b" Type="X20BM31" Version="1.0.0.1">
+    <Connection Connector="X2X1" TargetModule="X20BM31a" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20CM4810" Type="X20CM4810" Version="1.4.4.0">
+    <Connection Connector="SS1" TargetModule="X20TB12c" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31a" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="CONFIGHF" Value="0x0002" />
+    <Parameter ID="Current01" Value="on" />
+    <Parameter ID="DOWNSAMPLINGEDU01" Value="0x0001" />
+    <Parameter ID="Current02" Value="on" />
+    <Parameter ID="DOWNSAMPLINGEDU02" Value="0x0010" />
+    <Parameter ID="Current03" Value="on" />
+    <Parameter ID="DOWNSAMPLINGEDU03" Value="0x0100" />
+    <Parameter ID="DOWNSAMPLINGEDU04" Value="0x1000" />
+  </Module>
+  <Module Name="X20CM4810a" Type="X20CM4810" Version="1.4.4.0">
+    <Connection Connector="SS1" TargetModule="X20TB12d" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31b" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="CONFIGHF" Value="0x0002" />
+    <Parameter ID="Current01" Value="on" />
+    <Parameter ID="DOWNSAMPLINGQ01" Value="0x0003" />
+    <Parameter ID="DOWNSAMPLINGEDU01" Value="0x0001" />
+    <Parameter ID="Current02" Value="on" />
+    <Parameter ID="DOWNSAMPLINGQ02" Value="0x0030" />
+    <Parameter ID="DOWNSAMPLINGEDU02" Value="0x0010" />
+    <Parameter ID="Current03" Value="on" />
+    <Parameter ID="DOWNSAMPLINGQ03" Value="0x0300" />
+    <Parameter ID="DOWNSAMPLINGEDU03" Value="0x0100" />
+    <Parameter ID="FrequencyBandChannel01" Value="2" />
+    <Parameter ID="FrequencyBandSpeedCoupledEnable01" Value="off" />
+    <Parameter ID="FrequencyBandUpperFrequency01" Value="44" />
+    <Parameter ID="FrequencyBandChannel02" Value="2" />
+    <Parameter ID="FrequencyBandSource02" Value="EnvelopeAcc" />
+    <Parameter ID="FrequencyBandSpeedCoupledEnable02" Value="off" />
+    <Parameter ID="FrequencyBandUpperFrequency02" Value="44" />
+    <Parameter ID="FrequencyBandChannel03" Value="2" />
+    <Parameter ID="FrequencyBandSource03" Value="VibrationAcc" />
+    <Parameter ID="FrequencyBandEnable04" Value="on" />
+    <Parameter ID="FrequencyBandChannel04" Value="2" />
+    <Parameter ID="FrequencyBandSource04" Value="EnvelopeAcc" />
+  </Module>
+  <Module Name="X20CP0483" Type="X20CP0483" Version="1.2.1.0">
+    <Connection Connector="SL" TargetModule="X20BB52" TargetConnector="SL1" />
+    <Connector Name="IF2">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="10.49.140.110" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="CM_Test_2_Config1" />
+    <Parameter ID="UserPartitionSize" Value="128" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TimerDevice" Value="X20BB52.IF6" />
+    <Parameter ID="TaskClassIdleTime" Value="4000" />
+    <Parameter ID="Cyclic1Duration" Value="8000" />
+    <Parameter ID="Cyclic1Tolerance" Value="8000" />
+    <Parameter ID="Cyclic2Duration" Value="20000" />
+    <Parameter ID="Cyclic2Tolerance" Value="20000" />
+    <Parameter ID="Cyclic3Duration" Value="48000" />
+    <Parameter ID="Cyclic3Tolerance" Value="48000" />
+    <Parameter ID="Cyclic4Duration" Value="100000" />
+    <Parameter ID="Cyclic4Tolerance" Value="100000" />
+    <Parameter ID="Cyclic5Duration" Value="200000" />
+    <Parameter ID="Cyclic5Tolerance" Value="200000" />
+    <Parameter ID="Cyclic6Duration" Value="500000" />
+    <Parameter ID="Cyclic6Tolerance" Value="500000" />
+    <Parameter ID="Cyclic7Duration" Value="1000000" />
+    <Parameter ID="Cyclic7Tolerance" Value="1000000" />
+    <Parameter ID="Cyclic8Duration" Value="4000" />
+    <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER_DEVICE" />
+    <Parameter ID="FileDevicePath1" Value="F:/" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="br" />
+    <Parameter ID="FtpUserPassword1" Value="iEoko16pz7amprmsLYI1DwKbQ+e32DtfphqYcEeUXkU=" />
+    <Parameter ID="FtpUserSalt1" Value="8F7zxOsy" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
+  </Module>
+  <Module Name="X20PS9600" Type="X20PS9600" Version="1.0.2.0">
+    <Connection Connector="PS" TargetModule="X20BB52" TargetConnector="PS1" />
+    <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
+  </Module>
+  <Module Name="X20TB12" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12c" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12d" Type="X20TB12" Version="1.0.0.0" />
+</Hardware>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ConditionRawValues_Binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ToggleButtonPeakRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_data_vis.CM_PeakRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_data_vis.CM_RmsRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_data_vis.CM_CrestFactorRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_data_vis.CM_KutosisRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_data_vis.CM_SkewnessRaw" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ToggleButtonSkewness" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph5" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ToggleButtonKurtosis" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph4" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ToggleButtonCrestFactor" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph3" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ToggleButtonRms" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="OnlineChartGraph2" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_Analyse.PAR.RmsLimitUpper" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericInput16" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_Analyse.PAR.RmsLimitLower" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericInput15" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_Analyse.PAR.FrequencyStop" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericInput3" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_Analyse.PAR.FrequencyStart" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericInput4" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:CM_Analyse.PAR.RmsLimitInc" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericInput14" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="ToggleButtonEnv" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="LineChartGraphEnv1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="ToggleButtonRms" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="LineChartGraphRms1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="LineChartXAxisIndexCursor1" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionAnalyse_content" widgetRefId="NumericOutput14" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:visModuleSelection" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="ListBox1" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_Sample:visChannelSelection" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionRawValues_content" widgetRefId="NumericInput2" attribute="value" />
+		</Binding>
+		
+		
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.Status" attribute="value" />
+<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="txtBufferStatus" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.BufferType" attribute="value" />
+<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="dropBufferType" attribute="selectedValue" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.ERR.Text" attribute="value" />
+<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="txtBufferError" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

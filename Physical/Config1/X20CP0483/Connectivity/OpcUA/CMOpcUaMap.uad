@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4" ArVersion="C4.53">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x015F" />
+      </ACL>
+      <ACL Id="2">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x01FF" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">2</Low>
+          <High ValueProvider="PV">::CM_Sample:MAX_STOP_FREQUENCY</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::CM_Sample:MAX_STOP_FREQUENCY</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4740186" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="hertz" Symbol="Hz" />
+      <EngineeringUnit Id="2" UnitId="5394509" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="revolutions per minute" Symbol="rpm" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView AclId="2">
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables" />
+      <Task Name="CM_RawData">
+        <Variable Name="CM_buffer" AutomaticEnable="True" />
+      </Task>
+      <Task Name="CM_Sample">
+        <Variable Name="CM_Analyse" AutomaticEnable="True">
+          <Variable Name="PAR">
+            <Variable Name="FrequencyStop" EURangesId="1" />
+            <Variable Name="FrequencyStart" EURangesId="2" />
+          </Variable>
+        </Variable>
+        <Variable Name="CM_data" />
+        <Variable Name="CM_data_analyse" AutomaticEnable="True" />
+        <Variable Name="CM_data_vis" AutomaticEnable="True" />
+        <Variable Name="EnvReferenceBuffer" />
+        <Variable Name="EnvValuesBuffer" />
+        <Variable Name="RmsReferenceBuffer" />
+        <Variable Name="RmsValuesBuffer" />
+        <Variable Name="STEP_AUTO_READ" />
+        <Variable Name="STEP_AUTO_WAIT" />
+        <Variable Name="StepAutoAnalyze" />
+        <Variable Name="visChannelSelection" />
+        <Variable Name="visModuleSelection" />
+        <Variable Name="visStartStopAnalyse" />
+        <Variable Name="MAX_STOP_FREQUENCY" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

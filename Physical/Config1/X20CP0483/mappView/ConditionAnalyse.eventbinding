@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ConditionAnalyse_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<!--< Change text bock color depending on RMS status />-->
+		<EventBinding>
+			<Source xsi:type="opcUa.Event" refId="::CM_Sample:CM_data_analyse.RmsStatus" event="ValueChanged"/>
+			
+			<EventHandler condition="newValue=0">
+				<Action>
+					<Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ConditionAnalyse_content" widgetRefId="labRmsStatus" >
+						<Method xsi:type="widgets.brease.NumericOutput.Action.SetStyle" value="Output_OK" />
+					</Target>
+				</Action>							
+			</EventHandler>
+			
+			<EventHandler condition="newValue &gt;0">
+				<Action>
+					<Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ConditionAnalyse_content" widgetRefId="labRmsStatus" >
+						<Method xsi:type="widgets.brease.NumericOutput.Action.SetStyle" value="Output_ERR" />
+					</Target>
+				</Action>							
+			</EventHandler>
+		</EventBinding>	
+		
+		<!--< Change textbox color depending on ENV status />-->
+		<EventBinding>
+			<Source xsi:type="opcUa.Event" refId="::CM_Sample:CM_data_analyse.EnvStatus" event="ValueChanged"/>
+		
+			<EventHandler condition="newValue=0">
+				<Action>
+					<Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ConditionAnalyse_content" widgetRefId="labEnvStatus" >
+						<Method xsi:type="widgets.brease.NumericOutput.Action.SetStyle" value="Output_OK" />
+					</Target>
+				</Action>							
+			</EventHandler>
+		
+			<EventHandler condition="newValue &gt;0">
+				<Action>
+					<Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ConditionAnalyse_content" widgetRefId="labEnvStatus" >
+						<Method xsi:type="widgets.brease.NumericOutput.Action.SetStyle" value="Output_ERR" />
+					</Target>
+				</Action>							
+			</EventHandler>		
+		</EventBinding>
+		
+		<!--< Reset library error />-->
+		<EventBinding id="Header_content.btnErrorACK.Click">
+			<Source contentRefId="ConditionAnalyse_content" widgetRefId="btnErrorACK" xsi:type="widgets.brease.Button.Event" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::CM_Sample:CM_Analyse.CMD.ErrorReset" >
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+	</Bindings>
+</EventBindingSet>

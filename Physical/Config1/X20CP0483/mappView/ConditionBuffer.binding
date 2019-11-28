@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ConditionBuffer_Binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.DAT.yAxis" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="LineChartGraph1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.VisuBufferEnable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="numSensivity" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.VisuBufferEnable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="dropBufferType" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.VisuBufferEnable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="btnUploadStart" attribute="enable" />
+		</Binding>		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.Progress" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="proUpload" attribute="value" />
+		</Binding>
+		
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::CM_RawData:CM_buffer.PAR.SensitivitySensor" attribute="value" />
+<Target xsi:type="brease" contentRefId="ConditionBuffer_content" widgetRefId="numSensivity" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

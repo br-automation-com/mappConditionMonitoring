@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">CM_Sample</Object>
+    <Object Type="Program" Language="IEC">CM_RawData</Object>
+    <Object Type="Library" Language="IEC" Description="Add-on for condition monitoring module X20CMxxxx">mod_ConMon</Object>
+    <Object Type="File">Description condition monitoring library V1.pdf</Object>
+    <Object Type="File">changelog.txt</Object>
+  </Objects>
+</Package>

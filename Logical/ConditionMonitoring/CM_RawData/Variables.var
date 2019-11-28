@@ -1,0 +1,8 @@
+(*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
+VAR
+	CM_buffer : CM_BUFFER_MAIN;
+	UploadData : vbioCtrlCM4810Ex1; (*Funcktion block to upload data*)
+	MpRecipeCsv_0 : MpRecipeCsv; (*Save condition monitoring buffer*)
+	MpRecipeRegPar_0 : MpRecipeRegPar; (*Register condition monitoring buffer at recipe system*)
+	step : CM_BUFFER_STATE; (*Local state machine*)
+END_VAR

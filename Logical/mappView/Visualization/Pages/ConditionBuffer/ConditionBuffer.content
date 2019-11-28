@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ConditionBuffer_content" height="700" width="1300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.ProgressBar" id="proUpload" top="665" left="145" width="1110" zIndex="0" value="500" />
+    <Widget xsi:type="widgets.brease.LineChart" id="LineChart1" top="15" left="15" width="930" height="545" zIndex="1">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.LineChartIndexAxis" id="LineChartIndexAxis1" zIndex="0">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.LineChartYAxis" id="LineChartYAxis1" zIndex="1">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.LineChartGraph" id="LineChartGraph1" zIndex="0" maxValue="200" numberOfSamples="8196" xAxisRefId="LineChartIndexAxis1" />
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="660" left="5" width="130" zIndex="2" text="Upload Progress" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Button" id="btnUploadStart" top="135" left="1070" width="220" height="50" zIndex="3" text="Start Upload" />
+    <Widget xsi:type="widgets.brease.DropDownBox" id="dropBufferType" top="25" left="1080" width="210" zIndex="4" dataProvider="[{'value':'9','text':'Raw Acc 1'},{'value':'11','text':'Raw Acc 2'},{'value':'13','text':'Raw Acc 3'},{'value':'15','text':'Raw Acc 4'},{'value':'25','text':'Env 1'},{'value':'27','text':'Env 2'},{'value':'29','text':'Env 3'},{'value':'31','text':'Env 4'}]" listPosition="center" listWidth="210" selectedValue="9" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="25" left="935" width="140" zIndex="5" text="Buffer Type" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="75" left="935" width="140" zIndex="6" text="Sensivity" textAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="numSensivity" top="75" left="1080" width="205" zIndex="7" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="625" left="5" width="130" zIndex="8" text="Buffer Status" textAlign="right" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtBufferStatus" top="625" left="145" width="800" zIndex="9" borderWidth="1px" borderStyle="solid" />
+    <Widget xsi:type="widgets.brease.Button" id="btnUploadCancel" top="200" left="1070" width="220" height="50" zIndex="10" text="Cancel Upload" />
+    <Widget xsi:type="widgets.brease.Button" id="btnUploadResetError" top="260" left="1070" width="220" height="50" zIndex="11" text="Reset Error" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="590" left="0" width="130" zIndex="12" text="Error" textAlign="right" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtBufferError" top="585" left="145" width="800" zIndex="13" borderWidth="1px" borderStyle="solid" />
+  </Widgets>
+</Content>

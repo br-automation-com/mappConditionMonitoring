@@ -1,0 +1,6 @@
+
+{REDUND_OK} FUNCTION fctConMon : BOOL (* *) (*$GROUP=User,$CAT=User,$GROUPICON=LD_CamAutomat.png,$CATICON=LD_CamAutomat.png*)
+	VAR_INPUT
+		ptrConMon : REFERENCE TO CM_ANALYSE_typ;
+	END_VAR
+END_FUNCTION

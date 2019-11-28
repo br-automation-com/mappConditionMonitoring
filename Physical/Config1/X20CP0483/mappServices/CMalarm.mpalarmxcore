@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Element ID="gAlarmXCoreCM" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core">
+      <Group ID="BySeverity">
+        <Group ID="[0]">
+          <Property ID="Severity" Value="1" />
+          <Selector ID="[0]" Value="SendMessage" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Severity" Value="2" />
+          <Selector ID="[0]" Value="Remain" />
+        </Group>
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="RmsExceeded" />
+        <Property ID="Message" Value="RMS value exceeded at frequency {&amp;CM Frequency} on module {&amp;CM Module} at channel {&amp;CM Channel}, actual value is {&amp;CM Actual RMS}, reference value was {&amp;CM Reference RMS}" />
+        <Property ID="Code" Value="10000" />
+        <Property ID="Severity" Value="2" />
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="EnvExceeded" />
+        <Property ID="Message" Value="ENV value exceeded at frequency {&amp;CM Frequency} on module {&amp;CM Module} at channel {&amp;CM Channel}, actual value is {&amp;CM Actual ENV}, reference value was {&amp;CM Reference ENV}" />
+        <Property ID="Code" Value="10001" />
+        <Property ID="Severity" Value="2" />
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Snippets">
+      <Group ID="[0]">
+        <Property ID="Key" Value="CM Frequency" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_Analyse.STA.FrequencyValue" />
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Key" Value="CM Reference RMS" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_data_analyse.RmsReference" />
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Key" Value="CM Actual RMS" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_data_analyse.RmsValue" />
+        </Selector>
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Key" Value="CM Reference ENV" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_data_analyse.EnvReference" />
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Key" Value="CM Actual ENV" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_data_analyse.EnvValue" />
+        </Selector>
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Key" Value="CM Module" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_Analyse.PAR.ModuleName" />
+        </Selector>
+      </Group>
+      <Group ID="[6]">
+        <Property ID="Key" Value="CM Channel" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::CM_Advance:CM_Analyse.PAR.ModuleChannel" />
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

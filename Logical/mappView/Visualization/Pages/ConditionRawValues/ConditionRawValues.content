@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ConditionRawValues_content" height="700" width="1300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart1" top="0" left="0" width="990" height="680" zIndex="0" permissionOperate="['Administrators', 'Everyone']" permissionView="['Administrators', 'Everyone']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis1" zIndex="0" timeSpan="10">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis1" zIndex="1">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph1" zIndex="0" interpolationType="step-before" maxValue="300" xAxisRefId="OnlineChartTimeAxis1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph2" zIndex="1" interpolationType="step-before" maxValue="200" xAxisRefId="OnlineChartTimeAxis1" lineColor="rgba(0, 255, 0, 1)" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph3" zIndex="2" interpolationType="step-before" xAxisRefId="OnlineChartTimeAxis1" lineColor="rgba(0, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph4" zIndex="3" interpolationType="step-before" xAxisRefId="OnlineChartTimeAxis1" lineColor="rgba(128, 128, 128, 1)" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph5" zIndex="4" interpolationType="step-before" xAxisRefId="OnlineChartTimeAxis1" lineColor="rgba(0, 0, 255, 1)" />
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw1" top="160" left="1000" width="120" height="25" zIndex="1" text="Peak" textAlign="right" fontSize="16px" padding="0px 5px 0px 15px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="numRawPeak" top="160" left="1120" width="80" height="25" zIndex="2" borderWidth="2px" cornerRadius="5px" borderColor="rgba(255, 0, 0, 1)" padding="0px 5px 0px 5px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPeakRaw" top="160" left="1210" width="80" height="25" zIndex="3" mouseDownText="Off" text="On" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw3" top="200" left="1000" width="120" height="25" zIndex="4" text="Rms" textAlign="right" fontSize="16px" padding="0px 5px 0px 15px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="numRawRMS" top="200" left="1120" width="80" height="25" zIndex="5" borderWidth="2px" cornerRadius="5px" borderColor="rgba(0, 255, 0, 1)" padding="0px 5px 0px 5px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonRms" top="200" left="1210" width="80" height="25" zIndex="6" mouseDownText="Off" text="On" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw4" top="240" left="1000" width="120" height="25" zIndex="7" text="Crest Factor" textAlign="right" fontSize="16px" padding="0px 5px 0px 15px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="numRawCrest" top="240" left="1120" width="80" height="25" zIndex="8" borderWidth="2px" cornerRadius="5px" borderColor="rgba(0, 192, 192, 1)" padding="0px 5px 0px 5px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonCrestFactor" top="240" left="1210" width="80" height="25" zIndex="9" mouseDownText="Off" text="On" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw5" top="280" left="1000" width="120" height="25" zIndex="10" text="Kurtosis" textAlign="right" fontSize="16px" padding="0px 5px 0px 15px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="numRawKutosis" top="280" left="1120" width="80" height="25" zIndex="11" borderWidth="2px" cornerRadius="5px" borderColor="rgba(128, 128, 128, 1)" padding="0px 5px 0px 5px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonKurtosis" top="280" left="1210" width="80" height="25" zIndex="12" mouseDownText="Off" text="On" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw6" top="320" left="1000" width="120" height="25" zIndex="13" text="Skewness" textAlign="right" fontSize="16px" padding="0px 5px 0px 15px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="numRawSkew" top="320" left="1120" width="80" height="25" zIndex="14" borderWidth="2px" cornerRadius="5px" borderColor="rgba(0, 0, 255, 1)" padding="0px 5px 0px 5px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonSkewness" top="320" left="1210" width="80" height="25" zIndex="15" mouseDownText="Off" text="On" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="PeakRaw7" top="100" left="1060" width="130" height="25" zIndex="16" text="Module Channel" textAlign="right" fontSize="16px" padding="0px 0px 0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="100" left="1200" width="80" height="25" zIndex="17" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" value="1" />
+    <Widget xsi:type="widgets.brease.ListBox" id="ListBox1" top="20" left="1070" width="220" height="70" zIndex="18" dataProvider="[{'value':'IF6.ST1','text':'Module 1'},{'value':'IF6.ST2','text':'Module 2'}]" itemHeight="30" selectedValue="IF6.ST1" borderWidth="1px" cornerRadius="5px" textAlign="center" />
+    <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox1" top="620" left="1120" zIndex="19" text="Wire broken" disabledTextColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox2" top="660" left="1120" zIndex="20" text="Overflow" disabledTextColor="rgba(0, 0, 0, 1)" />
+  </Widgets>
+</Content>

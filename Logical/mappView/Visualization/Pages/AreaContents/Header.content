@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Header_content" height="100" width="1500" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="15" left="510" width="420" zIndex="0" text="Condition Monitoring Demo V1" textAlign="center" fontSize="26px" bold="true" />
+  </Widgets>
+</Content>
